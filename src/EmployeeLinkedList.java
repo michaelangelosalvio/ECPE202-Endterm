@@ -51,6 +51,10 @@ public class EmployeeLinkedList {
     //addBefore(A,E)
     //A --> E --> B --> C
     public void addAfter(Employee currentEmployee, Employee newEmployee){
+        if(list.contains(currentEmployee)) {
+            list.add((list.indexOf(currentEmployee)+1), newEmployee);
+        }
+
 
     }
 
@@ -60,6 +64,12 @@ public class EmployeeLinkedList {
      */
 
     public boolean isEmpty() {
+        int size = list.size();
+        if (size != 0) {
+            System.out.println("FALSE");
+        } else {
+            System.out.println("TRUE");
+        }
         return true;
     }
 }
